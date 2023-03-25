@@ -7,8 +7,8 @@
 此项目为大三上学期的课程设计，带有GUI界面界面的图像处理软件，同时还有基于PCA人脸识别功能，数据集在目录中可以找到，标签在程序中定义。值得一提的是，本来我觉得这个小项目做的挺好的，琢磨PyQt类继承重写上花了挺多功夫的，但是报告写偏题了 :(
 
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
-    <img src="demo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Son4ta/Picture-Processing-with-GUI/">
+    <img src="demo.png" alt="Demo" width="80" height="80">
   </a>
 </p>
 
