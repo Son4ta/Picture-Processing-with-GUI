@@ -102,9 +102,9 @@ filetree
 
 ### 作者
 
-Son4ta@Son4ta
+Son4ta@qq.com
 
-知乎:Son4ta&ensp; qq:1152670339
+知乎:Son4ta&ensp; QQ:1152670339
 
  *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
