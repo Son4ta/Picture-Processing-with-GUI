@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1115</width>
+    <height>669</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
+    <property name="spacing">
+     <number>7</number>
+    </property>
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>13</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="View" name="origin_img_graphicsView"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="origin_switch_pushButton">
+            <property name="text">
+             <string>直方图/原图</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="pushButton_3">
+              <property name="text">
+               <string>PCA</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_4">
+              <property name="text">
+               <string>多目标PCA</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="View" name="result_img_graphicsView"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string>直方图/原图</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>重置(Reset)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>13</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1115</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="open"/>
+    <addaction name="save"/>
+   </widget>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string>基本操作(&amp;P)</string>
+    </property>
+    <addaction name="spin"/>
+    <addaction name="reverse"/>
+    <addaction name="reverse_color"/>
+    <addaction name="gray"/>
+    <addaction name="cut"/>
+    <addaction name="hist"/>
+   </widget>
+   <widget class="QMenu" name="menu_G">
+    <property name="title">
+     <string>形态学(&amp;G)</string>
+    </property>
+    <addaction name="dilate"/>
+    <addaction name="erode"/>
+    <addaction name="opening"/>
+    <addaction name="closing"/>
+   </widget>
+   <widget class="QMenu" name="menu_T">
+    <property name="title">
+     <string>阈值(&amp;T)</string>
+    </property>
+    <addaction name="threshold"/>
+    <addaction name="iterate"/>
+    <addaction name="OTSU"/>
+    <addaction name="region_grow"/>
+   </widget>
+   <widget class="QMenu" name="menu_B">
+    <property name="title">
+     <string>边缘检测(&amp;B)</string>
+    </property>
+    <addaction name="laplace"/>
+    <addaction name="sobel"/>
+   </widget>
+   <widget class="QMenu" name="menu_D">
+    <property name="title">
+     <string>绘制(&amp;D)</string>
+    </property>
+    <addaction name="rect"/>
+    <addaction name="line"/>
+    <addaction name="circle"/>
+    <addaction name="text"/>
+   </widget>
+   <widget class="QMenu" name="menu_L">
+    <property name="title">
+     <string>滤波(&amp;L)</string>
+    </property>
+    <addaction name="middle"/>
+    <addaction name="median"/>
+    <addaction name="maxf"/>
+    <addaction name="minf"/>
+    <addaction name="sharpen"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_P"/>
+   <addaction name="menu_G"/>
+   <addaction name="menu_T"/>
+   <addaction name="menu_B"/>
+   <addaction name="menu_L"/>
+   <addaction name="menu_D"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="open"/>
+   <addaction name="save"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="open">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="save">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="spin">
+   <property name="text">
+    <string>旋转</string>
+   </property>
+  </action>
+  <action name="reverse">
+   <property name="text">
+    <string>翻转</string>
+   </property>
+  </action>
+  <action name="reverse_color">
+   <property name="text">
+    <string>反色</string>
+   </property>
+  </action>
+  <action name="gray">
+   <property name="text">
+    <string>灰度化</string>
+   </property>
+  </action>
+  <action name="cut">
+   <property name="text">
+    <string>裁剪</string>
+   </property>
+  </action>
+  <action name="hist">
+   <property name="text">
+    <string>直方图均衡</string>
+   </property>
+  </action>
+  <action name="dilate">
+   <property name="text">
+    <string>膨胀</string>
+   </property>
+  </action>
+  <action name="erode">
+   <property name="text">
+    <string>腐蚀</string>
+   </property>
+  </action>
+  <action name="opening">
+   <property name="text">
+    <string>开运算</string>
+   </property>
+  </action>
+  <action name="closing">
+   <property name="text">
+    <string>闭运算</string>
+   </property>
+  </action>
+  <action name="threshold">
+   <property name="text">
+    <string>给定阈值分割</string>
+   </property>
+  </action>
+  <action name="iterate">
+   <property name="text">
+    <string>全局自动阈值分割</string>
+   </property>
+  </action>
+  <action name="OTSU">
+   <property name="text">
+    <string>OTSU</string>
+   </property>
+  </action>
+  <action name="region_grow">
+   <property name="text">
+    <string>区域生长</string>
+   </property>
+  </action>
+  <action name="laplace">
+   <property name="text">
+    <string>Laplace</string>
+   </property>
+  </action>
+  <action name="sobel">
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+  </action>
+  <action name="rect">
+   <property name="text">
+    <string>矩形</string>
+   </property>
+  </action>
+  <action name="line">
+   <property name="text">
+    <string>直线</string>
+   </property>
+  </action>
+  <action name="circle">
+   <property name="text">
+    <string>圆</string>
+   </property>
+  </action>
+  <action name="text">
+   <property name="text">
+    <string>文字</string>
+   </property>
+  </action>
+  <action name="middle">
+   <property name="text">
+    <string>中值滤波</string>
+   </property>
+  </action>
+  <action name="median">
+   <property name="text">
+    <string>均值滤波</string>
+   </property>
+  </action>
+  <action name="maxf">
+   <property name="text">
+    <string>最大值滤波</string>
+   </property>
+  </action>
+  <action name="minf">
+   <property name="text">
+    <string>最小值滤波</string>
+   </property>
+  </action>
+  <action name="sharpen">
+   <property name="text">
+    <string>锐化</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>View</class>
+   <extends>QGraphicsView</extends>
+   <header>view.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>result_switch_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>835</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>781</x>
+     <y>410</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>origin_switch_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>origin_switch_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>639</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>408</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>result_reset_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1032</x>
+     <y>631</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>778</x>
+     <y>374</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>PCA_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>639</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>multiple_PCA_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>510</x>
+     <y>622</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>result_switch_clicked()</slot>
+  <slot>result_reset_clicked()</slot>
+  <slot>PCA_clicked()</slot>
+  <slot>multiple_PCA_clicked()</slot>
+ </slots>
+</ui>
