@@ -124,6 +124,7 @@ Son4ta@Son4ta
 - [Choose an Open Source License](https://choosealicense.com)
 - [GitHub Pages](https://pages.github.com)
 - [Animate.css](https://daneden.github.io/animate.css)
+- [WIT](https://www.wit.edu.cn/index.htm)
 
 <!-- links -->
 
